@@ -14,10 +14,7 @@ class App extends Component {
     // }
     this.state = {
       // loggedIn: token ? true : false,
-      nowPlaying: { name: 'Not Checked', albumArt: '' },
       list: [],
-      picsList: { p1: '', p2:'', p3: '', p4: '', p5:'',
-                  p6: '', p7:'', p8: '', p9: '', p10:''}
     }
   }
   getToken() { 
@@ -88,7 +85,7 @@ class App extends Component {
           </button>
         }
         <button  onClick={this.getToken.bind(this)}>
-          get token
+          Display the 10!
         </button>
       </div>
     );
