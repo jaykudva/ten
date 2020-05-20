@@ -67,26 +67,23 @@ class App extends Component {
   render() {
     return (
       <div className= "center-v">
-        {/* <div className="App">
-          <a href = "http://localhost:8888"><button > Login to Spotify</button></a>
-        </div> */}
-        <div>
-
-        </div>
-        <div>
-          {
-            this.state.list.map((song, i) => {
-              return <p><img src={song.track.album.images[0].url} style={{ height: this.x }}/> {i+1}: {song.track.name}</p>
-            })
-          }
-        </div>
-        { this.state.loggedIn && <button onClick={() => this.getTenPlaylist()}>
-            10
-          </button>
-        }
-        <button  onClick={this.getToken.bind(this)}>
-          Display the 10!
-        </button>
+          <div className="bounds">
+            <div>
+              {this.getToken()}
+              {
+                this.state.list.map((song, i) => {
+                  return <p><img src={song.track.album.images[0].url} style={{ height: this.x }}/> {i+1}: <a href={song.track.external_urls.spotify} target="_blank">{song.track.name}</a></p>
+                })
+              }
+            </div>
+            { this.state.loggedIn && <button onClick={() => this.getTenPlaylist()}>
+                10
+              </button>
+            }
+            <button  onClick={this.getToken.bind(this)}>
+              Update
+            </button>
+          </div>
       </div>
     );
   }
