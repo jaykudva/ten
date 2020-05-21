@@ -1,22 +1,87 @@
 h1, h2, p, a, button {
   /*font-family: 'Gelasio', serif;*/
   font-family: 'Poppins', sans-serif;
+  /* font-family: 'Playfair Display', serif; */
   font-weight: 600;
   /*font-size: 1.5em;*/
 }
-body {
-  background: -webkit-linear-gradient(left, #ff6e7f, #bfe9ff)
+
+.gradient-text {
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
 }
+
+p, a {
+  isolation: isolate;
+}
+
+.darkmode--activated p {
+  color:white;
+}
+.darkmode--activated a {
+  color: white;
+}
+.darkmode--activated ul {
+  color: white;
+}
+.darkmode--activated li {
+  color: white;
+}
+
+/* body {
+  /*background: -webkit-linear-gradient(left, #ff6e7f, #bfe9ff)*/
+  /*background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));*/
+  /* background: linear-gradient(to right, rgb(131, 96, 195), rgb(46, 191, 145)); */
+  /* background: linear-gradient(to right, rgb(16, 141, 199), rgb(239, 142, 56)) 
+}*/
 a {
   text-decoration: none;
-  color: inherit;
+  color:black;
 }
+
 img {
   display: inline-block;
   margin-right: 10px;
   vertical-align: middle;
 }
+/* top nav bar inspired entirely by @aeloyus, can be found at aeloy.us*/
+ul {
+  padding-top: 0.2rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  isolation: isolate;
+}
 
+li {
+  padding-right: 1em;
+}
+
+li:hover {
+  /* color: #ff906b; */
+  background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
+  isolation: isolate;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a:hover {
+  isolation: isolate;
+  background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+ul.circle {
+  list-style-type: circle;
+}
+
+ul.square {
+  list-style-type: circle;
+}
 .bounds {
   margin-bottom: 7em;
   margin-top: 7em;
@@ -34,8 +99,12 @@ img {
   column-width: auto;
 }
 
+html { scrollbar-width: none; }
+::-webkit-scrollbar { display: none; }
+
 button {
-  background-color: #a5d5ff;
+  /* background-color: #a5d5ff; */
+  background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
   border: none;
   color: white;
   padding-top: 50%;
@@ -44,19 +113,11 @@ button {
   font-size: 16px;
   cursor: pointer;
   justify-content: center;
-  border-radius: 3px
+  border-radius: 3px;
+  isolation: isolate;
 }
 
 .center-v {
-  /*text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);*/
-}
-
-#otis li {
-  list-style-type: none;
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
