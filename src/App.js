@@ -85,7 +85,6 @@ class App extends Component {
   }
   componentDidMount() {
     this.getToken()
-    
   }
   render() {
     return (
