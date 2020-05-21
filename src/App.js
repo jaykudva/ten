@@ -112,6 +112,9 @@ class App extends Component {
                 <li>
                     <a href="/ten">top10</a>
                 </li>
+                <li>
+                    <a href="/quotes">quotes</a>
+                </li>
             </ul>
         </nav>
           <div className="bounds">
