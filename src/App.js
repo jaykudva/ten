@@ -4,7 +4,7 @@ import Darkmode from 'darkmode-js';
 import SpotifyWebApi from 'spotify-web-api-js';
 const spotifyApi = new SpotifyWebApi();
 
-var options = {
+const options = {
   bottom: '32px', // default: '32px'
   right: '32px', // default: '32px'
   left: 'unset', // default: 'unset'
@@ -17,7 +17,9 @@ var options = {
   label: String.fromCodePoint(0x1F313), // default: ''
   autoMatchOsTheme: true // default: true
 }
+
 const darkmode = new Darkmode(options);
+
 darkmode.showWidget();
 
 class App extends Component {
