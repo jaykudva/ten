@@ -121,8 +121,16 @@ class App extends Component {
             <div>
               {
                 this.state.list.map((song, i) => {
-                  return <p><img src={song.track.album.images[0].url} style={{ height: this.x }}/> {i+1}: <a href={song.track.external_urls.spotify} target="_blank" className="ooga">{song.track.name}</a></p>
-                })
+                  console.log(i + " is " + song.track.album.images[0])
+                  // print()
+                  if (song.track.album.images[0] != null) {
+                    return <p>
+                    <img src={song.track.album.images[0].url} style={{ height: this.x }}/> 
+                    {i+1}: <a href={song.track.external_urls.spotify} target="_blank" className="ooga">{song.track.name}</a> </p>
+                  } else {
+                  return <p>
+                    {i+1}: <a href={song.track.external_urls.spotify} target="_blank" className="ooga">{song.track.name}</a> </p>
+                }})
               }
             </div>
             { this.state.loggedIn && <button onClick={() => this.getTenPlaylist()}>
